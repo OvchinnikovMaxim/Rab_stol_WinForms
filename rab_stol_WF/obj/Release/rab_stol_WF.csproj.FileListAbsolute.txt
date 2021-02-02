@@ -24,3 +24,6 @@ C:\Users\ovchinnikov\source\repos\rab_stol_WF\rab_stol_WF\obj\Release\rab_stol_W
 C:\Users\ovchinnikov\source\repos\rab_stol_WF\rab_stol_WF\obj\Release\rab_stol_WF.pdb
 C:\Users\ovchinnikov\source\repos\rab_stol_WF\rab_stol_WF\obj\Release\rab_stol_WF.new_tek_info.resources
 C:\Users\ovchinnikov\source\repos\rab_stol_WF\rab_stol_WF\obj\Release\rab_stol_WF.new_class_price_form.resources
+C:\Users\ovchinnikov\source\repos\rab_stol_WF\rab_stol_WF\bin\Release\BCrypt.Net-Next.dll
+C:\Users\ovchinnikov\source\repos\rab_stol_WF\rab_stol_WF\bin\Release\BCrypt.Net-Next.xml
+C:\Users\ovchinnikov\source\repos\rab_stol_WF\rab_stol_WF\obj\Release\rab_stol_WF.Edit_pass_tek.resources

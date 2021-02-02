@@ -174,5 +174,11 @@ namespace rab_stol_WF
             new_tek_info tek_Info = new new_tek_info();
             tek_Info.Show();
         }
+
+        private void btn_edit_pass_Click(object sender, EventArgs e)
+        {
+            Edit_pass_tek edit_Pass = new Edit_pass_tek();
+            edit_Pass.Show();
+        }
     }
 }
