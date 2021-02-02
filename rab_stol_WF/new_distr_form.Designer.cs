@@ -85,9 +85,9 @@ namespace rab_stol_WF
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.btn_create_distr, 3);
             this.btn_create_distr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_create_distr.Location = new System.Drawing.Point(3, 154);
+            this.btn_create_distr.Location = new System.Drawing.Point(3, 153);
             this.btn_create_distr.Name = "btn_create_distr";
-            this.btn_create_distr.Size = new System.Drawing.Size(481, 95);
+            this.btn_create_distr.Size = new System.Drawing.Size(481, 96);
             this.btn_create_distr.TabIndex = 0;
             this.btn_create_distr.Text = "Создать учетные данные";
             this.btn_create_distr.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@ namespace rab_stol_WF
             this.panel_distrID.Controls.Add(this.text_distrID);
             this.panel_distrID.Controls.Add(this.label_distrID);
             this.panel_distrID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_distrID.Location = new System.Drawing.Point(3, 34);
+            this.panel_distrID.Location = new System.Drawing.Point(3, 33);
             this.panel_distrID.Name = "panel_distrID";
             this.panel_distrID.Size = new System.Drawing.Size(158, 54);
             this.panel_distrID.TabIndex = 1;
@@ -129,7 +129,7 @@ namespace rab_stol_WF
             this.panel_zavod.Controls.Add(this.combo_zavod);
             this.panel_zavod.Controls.Add(this.label_zavod);
             this.panel_zavod.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_zavod.Location = new System.Drawing.Point(167, 34);
+            this.panel_zavod.Location = new System.Drawing.Point(167, 33);
             this.panel_zavod.Name = "panel_zavod";
             this.panel_zavod.Size = new System.Drawing.Size(158, 54);
             this.panel_zavod.TabIndex = 2;
@@ -164,7 +164,7 @@ namespace rab_stol_WF
             this.panel_login.Controls.Add(this.text_login);
             this.panel_login.Controls.Add(this.label_login);
             this.panel_login.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_login.Location = new System.Drawing.Point(331, 34);
+            this.panel_login.Location = new System.Drawing.Point(331, 33);
             this.panel_login.Name = "panel_login";
             this.panel_login.Size = new System.Drawing.Size(153, 54);
             this.panel_login.TabIndex = 3;
@@ -194,7 +194,7 @@ namespace rab_stol_WF
             this.panel_password.Controls.Add(this.text_pass);
             this.panel_password.Controls.Add(this.label_pass);
             this.panel_password.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_password.Location = new System.Drawing.Point(331, 94);
+            this.panel_password.Location = new System.Drawing.Point(331, 93);
             this.panel_password.Name = "panel_password";
             this.panel_password.Size = new System.Drawing.Size(153, 54);
             this.panel_password.TabIndex = 4;
@@ -225,7 +225,7 @@ namespace rab_stol_WF
             this.check_mobile_trade.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.check_mobile_trade.AutoCheck = false;
             this.check_mobile_trade.AutoSize = true;
-            this.check_mobile_trade.Location = new System.Drawing.Point(3, 112);
+            this.check_mobile_trade.Location = new System.Drawing.Point(3, 111);
             this.check_mobile_trade.Name = "check_mobile_trade";
             this.check_mobile_trade.Size = new System.Drawing.Size(132, 17);
             this.check_mobile_trade.TabIndex = 5;
@@ -239,7 +239,7 @@ namespace rab_stol_WF
             this.check_integr_modul.AutoSize = true;
             this.check_integr_modul.Checked = true;
             this.check_integr_modul.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_integr_modul.Location = new System.Drawing.Point(167, 112);
+            this.check_integr_modul.Location = new System.Drawing.Point(167, 111);
             this.check_integr_modul.Name = "check_integr_modul";
             this.check_integr_modul.Size = new System.Drawing.Size(125, 17);
             this.check_integr_modul.TabIndex = 6;
@@ -255,7 +255,7 @@ namespace rab_stol_WF
             this.label_status.ForeColor = System.Drawing.Color.Red;
             this.label_status.Location = new System.Drawing.Point(331, 0);
             this.label_status.Name = "label_status";
-            this.label_status.Size = new System.Drawing.Size(153, 31);
+            this.label_status.Size = new System.Drawing.Size(153, 30);
             this.label_status.TabIndex = 7;
             this.label_status.Text = "Отключено";
             this.label_status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -266,7 +266,7 @@ namespace rab_stol_WF
             this.btn_connect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_connect.Location = new System.Drawing.Point(167, 3);
             this.btn_connect.Name = "btn_connect";
-            this.btn_connect.Size = new System.Drawing.Size(158, 25);
+            this.btn_connect.Size = new System.Drawing.Size(158, 24);
             this.btn_connect.TabIndex = 8;
             this.btn_connect.Text = "Подключение";
             this.btn_connect.UseVisualStyleBackColor = true;

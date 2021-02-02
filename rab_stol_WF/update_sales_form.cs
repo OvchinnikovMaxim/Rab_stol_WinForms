@@ -1,8 +1,7 @@
-﻿using System;
+﻿using SQLquerys;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using SQLquerys;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace rab_stol_WF

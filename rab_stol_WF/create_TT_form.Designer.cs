@@ -57,7 +57,7 @@ namespace rab_stol_WF
             this.tableLayoutPanel_createTT.ColumnCount = 3;
             this.tableLayoutPanel_createTT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.74468F));
             this.tableLayoutPanel_createTT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.25532F));
-            this.tableLayoutPanel_createTT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 271F));
+            this.tableLayoutPanel_createTT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
             this.tableLayoutPanel_createTT.Controls.Add(this.text_server, 0, 0);
             this.tableLayoutPanel_createTT.Controls.Add(this.btn_connect, 1, 0);
             this.tableLayoutPanel_createTT.Controls.Add(this.label_status_connect, 2, 0);
@@ -95,7 +95,7 @@ namespace rab_stol_WF
             this.btn_connect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_connect.Location = new System.Drawing.Point(132, 3);
             this.btn_connect.Name = "btn_connect";
-            this.btn_connect.Size = new System.Drawing.Size(97, 29);
+            this.btn_connect.Size = new System.Drawing.Size(96, 29);
             this.btn_connect.TabIndex = 1;
             this.btn_connect.Text = "Подключение";
             this.btn_connect.UseVisualStyleBackColor = true;
@@ -105,9 +105,9 @@ namespace rab_stol_WF
             // 
             this.label_status_connect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_status_connect.ForeColor = System.Drawing.Color.Red;
-            this.label_status_connect.Location = new System.Drawing.Point(235, 0);
+            this.label_status_connect.Location = new System.Drawing.Point(234, 0);
             this.label_status_connect.Name = "label_status_connect";
-            this.label_status_connect.Size = new System.Drawing.Size(266, 35);
+            this.label_status_connect.Size = new System.Drawing.Size(267, 35);
             this.label_status_connect.TabIndex = 2;
             this.label_status_connect.Text = "Отключено";
             this.label_status_connect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -115,9 +115,9 @@ namespace rab_stol_WF
             // btn_createTT
             // 
             this.btn_createTT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_createTT.Location = new System.Drawing.Point(235, 268);
+            this.btn_createTT.Location = new System.Drawing.Point(234, 268);
             this.btn_createTT.Name = "btn_createTT";
-            this.btn_createTT.Size = new System.Drawing.Size(266, 56);
+            this.btn_createTT.Size = new System.Drawing.Size(267, 56);
             this.btn_createTT.TabIndex = 5;
             this.btn_createTT.Text = "Создать";
             this.btn_createTT.UseVisualStyleBackColor = true;
@@ -200,7 +200,7 @@ namespace rab_stol_WF
             this.panel3.Controls.Add(this.label_zavod);
             this.panel3.Location = new System.Drawing.Point(132, 268);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(97, 56);
+            this.panel3.Size = new System.Drawing.Size(96, 56);
             this.panel3.TabIndex = 9;
             // 
             // combo_zav
