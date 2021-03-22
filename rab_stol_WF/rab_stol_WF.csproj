@@ -45,8 +45,9 @@
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="SQLquerys">
-      <HintPath>..\..\..\..\Documents\SharpDevelop Projects\SQLquerys\SQLquerys\bin\Release\SQLquerys.dll</HintPath>
+    <Reference Include="SQLquerys, Version=1.0.7751.15145, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SQLquerys\SQLquerys\bin\Debug\SQLquerys.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

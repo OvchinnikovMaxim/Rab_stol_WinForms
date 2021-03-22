@@ -23,6 +23,7 @@ namespace rab_stol_WF
         {
             InitializeComponent();
             combo_zavod.SelectedIndex = 0;
+            combo_class.SelectedIndex = 0;
         }
 
         private void btn_connect_Click(object sender, EventArgs e)
@@ -35,10 +36,26 @@ namespace rab_stol_WF
             sc.TextChanged(connection, text_server, label_status);
         }
 
+        #region только числа
         private void text_server_KeyPress(object sender, KeyPressEventArgs e)
         {
             sc.TextServer(e);
         }
+
+        private void text_from_railway_trans_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            sc.TextServer(e);
+        }
+
+        private void text_to_railway_trans_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            sc.TextServer(e);
+        }
+        private void text_empID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            sc.TextChisla(e);
+        } 
+        #endregion
 
         private void btn_new_tek_Click(object sender, EventArgs e)
         {
@@ -51,8 +68,9 @@ namespace rab_stol_WF
             {
                 try
                 {
-                    int zav;
+                    int zav, clas;
                     zav = combo_zavod.SelectedIndex == 0 ? 1 : 2;
+                    clas = combo_class.SelectedIndex == 0 ? 20 : 21;
 
                     string name = text_name_tek.Text;
                     string dogovor = text_Ndog_tek.Text;
@@ -67,12 +85,13 @@ namespace rab_stol_WF
                     string pass = text_pass.Text;
                     string login = text_login.Text;
                     int userID = Convert.ToInt32(text_empID.Text);
+                    
 
                     SqlCommand search_userID = new SqlCommand("select id from nefco.dbo.user_inf where id=" + userID, connection);
 
                     if (userID == Convert.ToInt32(search_userID.ExecuteScalar()))
                     {
-                        SqlCommand new_TEK = new SqlCommand(q.new_TEK(name, zav, dogovor, address, r_s, bank, k_s, bik, inn, kpp, date_n, pass, login, userID), connection);
+                        SqlCommand new_TEK = new SqlCommand(q.new_TEK(name, zav, dogovor, address, r_s, bank, k_s, bik, inn, kpp, date_n, pass, login, userID, clas), connection);
                         new_TEK.ExecuteNonQuery();
 
                         MessageBox.Show("Транспортная компания добавлена", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -94,12 +113,7 @@ namespace rab_stol_WF
                 }
             }
         }
-
-        private void text_empID_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            sc.TextChisla(e);
-        }
-
+                
         private void text_empID_TextChanged(object sender, EventArgs e)
         {
             label_empID.ForeColor = Color.Green;
@@ -179,6 +193,36 @@ namespace rab_stol_WF
         {
             Edit_pass_tek edit_Pass = new Edit_pass_tek();
             edit_Pass.Show();
+        }
+
+        private void combo_class_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            group_uslugi.Enabled = combo_class.SelectedIndex == 1;
+        }
+
+        private void btn_copy_service_Click(object sender, EventArgs e)
+        {
+            int trans_from = Convert.ToInt32(text_from_railway_trans.Text);
+            int trans_to = Convert.ToInt32(text_to_railway_trans.Text);
+
+            string query = @"insert into nefco.dbo.tc_trip_railway_transpcompany_service(transp_company,service_id)" +
+                "select " + trans_to + ", service_id from nefco.dbo.tc_trip_railway_transpcompany_service where transp_company=" + trans_from + ";";
+
+            try
+            {
+                SqlCommand copy_services = new SqlCommand(query, connection);
+                copy_services.ExecuteNonQuery();
+
+                MessageBox.Show("Услуги скопированы", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Ошибка запроса", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

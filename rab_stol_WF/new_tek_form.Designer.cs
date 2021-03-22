@@ -83,6 +83,15 @@ namespace rab_stol_WF
             this.text_search_user = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tool_act = new System.Windows.Forms.ToolTip(this.components);
+            this.panel_class = new System.Windows.Forms.Panel();
+            this.combo_class = new System.Windows.Forms.ComboBox();
+            this.label_class = new System.Windows.Forms.Label();
+            this.group_uslugi = new System.Windows.Forms.GroupBox();
+            this.btn_copy_service = new System.Windows.Forms.Button();
+            this.label_from_railway_trans = new System.Windows.Forms.Label();
+            this.text_from_railway_trans = new System.Windows.Forms.TextBox();
+            this.label_to_railway_trans = new System.Windows.Forms.Label();
+            this.text_to_railway_trans = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.group_tek.SuspendLayout();
             this.tablePanel_tek.SuspendLayout();
@@ -96,6 +105,8 @@ namespace rab_stol_WF
             this.panel2.SuspendLayout();
             this.group_search_user.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel_class.SuspendLayout();
+            this.group_uslugi.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -103,7 +114,7 @@ namespace rab_stol_WF
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.65663F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.34337F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247F));
             this.tableLayoutPanel1.Controls.Add(this.label_status, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_connect, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.text_server, 0, 0);
@@ -113,14 +124,13 @@ namespace rab_stol_WF
             this.tableLayoutPanel1.Controls.Add(this.group_uch_tek, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.93056F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.06944F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(893, 312);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(901, 312);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label_status
@@ -129,9 +139,9 @@ namespace rab_stol_WF
             this.label_status.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_status.ForeColor = System.Drawing.Color.Red;
-            this.label_status.Location = new System.Drawing.Point(652, 0);
+            this.label_status.Location = new System.Drawing.Point(656, 0);
             this.label_status.Name = "label_status";
-            this.label_status.Size = new System.Drawing.Size(238, 39);
+            this.label_status.Size = new System.Drawing.Size(242, 39);
             this.label_status.TabIndex = 1;
             this.label_status.Text = "Отключено";
             this.label_status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,9 +150,9 @@ namespace rab_stol_WF
             // 
             this.btn_connect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_connect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn_connect.Location = new System.Drawing.Point(338, 3);
+            this.btn_connect.Location = new System.Drawing.Point(340, 3);
             this.btn_connect.Name = "btn_connect";
-            this.btn_connect.Size = new System.Drawing.Size(308, 33);
+            this.btn_connect.Size = new System.Drawing.Size(310, 33);
             this.btn_connect.TabIndex = 2;
             this.btn_connect.Text = "Подключение";
             this.btn_connect.UseVisualStyleBackColor = true;
@@ -154,7 +164,7 @@ namespace rab_stol_WF
             this.text_server.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.text_server.Location = new System.Drawing.Point(3, 3);
             this.text_server.Name = "text_server";
-            this.text_server.Size = new System.Drawing.Size(329, 29);
+            this.text_server.Size = new System.Drawing.Size(331, 29);
             this.text_server.TabIndex = 0;
             this.text_server.Text = "192.168.2.7";
             this.text_server.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -165,9 +175,9 @@ namespace rab_stol_WF
             // 
             this.btn_new_tek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_new_tek.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn_new_tek.Location = new System.Drawing.Point(652, 238);
+            this.btn_new_tek.Location = new System.Drawing.Point(656, 238);
             this.btn_new_tek.Name = "btn_new_tek";
-            this.btn_new_tek.Size = new System.Drawing.Size(238, 71);
+            this.btn_new_tek.Size = new System.Drawing.Size(242, 71);
             this.btn_new_tek.TabIndex = 3;
             this.btn_new_tek.Text = "Добавить транспортную компанию";
             this.btn_new_tek.UseVisualStyleBackColor = true;
@@ -179,7 +189,7 @@ namespace rab_stol_WF
             this.group_tek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.group_tek.Location = new System.Drawing.Point(3, 42);
             this.group_tek.Name = "group_tek";
-            this.group_tek.Size = new System.Drawing.Size(329, 190);
+            this.group_tek.Size = new System.Drawing.Size(331, 190);
             this.group_tek.TabIndex = 4;
             this.group_tek.TabStop = false;
             this.group_tek.Text = "Транспортная";
@@ -213,7 +223,7 @@ namespace rab_stol_WF
             this.tablePanel_tek.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tablePanel_tek.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tablePanel_tek.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tablePanel_tek.Size = new System.Drawing.Size(323, 171);
+            this.tablePanel_tek.Size = new System.Drawing.Size(325, 171);
             this.tablePanel_tek.TabIndex = 0;
             // 
             // label_name_tek
@@ -222,7 +232,7 @@ namespace rab_stol_WF
             this.label_name_tek.ForeColor = System.Drawing.Color.Red;
             this.label_name_tek.Location = new System.Drawing.Point(3, 0);
             this.label_name_tek.Name = "label_name_tek";
-            this.label_name_tek.Size = new System.Drawing.Size(101, 28);
+            this.label_name_tek.Size = new System.Drawing.Size(102, 28);
             this.label_name_tek.TabIndex = 0;
             this.label_name_tek.Text = "Наименование";
             this.label_name_tek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,7 +242,7 @@ namespace rab_stol_WF
             this.label_yur_adress_tek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_yur_adress_tek.Location = new System.Drawing.Point(3, 28);
             this.label_yur_adress_tek.Name = "label_yur_adress_tek";
-            this.label_yur_adress_tek.Size = new System.Drawing.Size(101, 28);
+            this.label_yur_adress_tek.Size = new System.Drawing.Size(102, 28);
             this.label_yur_adress_tek.TabIndex = 1;
             this.label_yur_adress_tek.Text = "Юридический адрес";
             this.label_yur_adress_tek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -242,7 +252,7 @@ namespace rab_stol_WF
             this.label_Ndog_tek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_Ndog_tek.Location = new System.Drawing.Point(3, 56);
             this.label_Ndog_tek.Name = "label_Ndog_tek";
-            this.label_Ndog_tek.Size = new System.Drawing.Size(101, 28);
+            this.label_Ndog_tek.Size = new System.Drawing.Size(102, 28);
             this.label_Ndog_tek.TabIndex = 2;
             this.label_Ndog_tek.Text = "Номер договора";
             this.label_Ndog_tek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -252,7 +262,7 @@ namespace rab_stol_WF
             this.label_dataDog_tek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_dataDog_tek.Location = new System.Drawing.Point(3, 84);
             this.label_dataDog_tek.Name = "label_dataDog_tek";
-            this.label_dataDog_tek.Size = new System.Drawing.Size(101, 28);
+            this.label_dataDog_tek.Size = new System.Drawing.Size(102, 28);
             this.label_dataDog_tek.TabIndex = 3;
             this.label_dataDog_tek.Text = "Дата договора";
             this.label_dataDog_tek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,7 +272,7 @@ namespace rab_stol_WF
             this.label_inn_tek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_inn_tek.Location = new System.Drawing.Point(3, 112);
             this.label_inn_tek.Name = "label_inn_tek";
-            this.label_inn_tek.Size = new System.Drawing.Size(101, 28);
+            this.label_inn_tek.Size = new System.Drawing.Size(102, 28);
             this.label_inn_tek.TabIndex = 4;
             this.label_inn_tek.Text = "ИНН";
             this.label_inn_tek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -272,7 +282,7 @@ namespace rab_stol_WF
             this.label_kpp_tek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_kpp_tek.Location = new System.Drawing.Point(3, 140);
             this.label_kpp_tek.Name = "label_kpp_tek";
-            this.label_kpp_tek.Size = new System.Drawing.Size(101, 31);
+            this.label_kpp_tek.Size = new System.Drawing.Size(102, 31);
             this.label_kpp_tek.TabIndex = 5;
             this.label_kpp_tek.Text = "КПП";
             this.label_kpp_tek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -282,10 +292,10 @@ namespace rab_stol_WF
             this.tablePanel_tek.SetColumnSpan(this.text_name_tek, 2);
             this.text_name_tek.Dock = System.Windows.Forms.DockStyle.Top;
             this.text_name_tek.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_name_tek.Location = new System.Drawing.Point(110, 3);
+            this.text_name_tek.Location = new System.Drawing.Point(111, 3);
             this.text_name_tek.MaxLength = 500;
             this.text_name_tek.Name = "text_name_tek";
-            this.text_name_tek.Size = new System.Drawing.Size(210, 23);
+            this.text_name_tek.Size = new System.Drawing.Size(211, 23);
             this.text_name_tek.TabIndex = 6;
             this.text_name_tek.TextChanged += new System.EventHandler(this.text_name_tek_TextChanged);
             // 
@@ -294,20 +304,20 @@ namespace rab_stol_WF
             this.tablePanel_tek.SetColumnSpan(this.text_yur_adress_tek, 2);
             this.text_yur_adress_tek.Dock = System.Windows.Forms.DockStyle.Top;
             this.text_yur_adress_tek.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_yur_adress_tek.Location = new System.Drawing.Point(110, 31);
+            this.text_yur_adress_tek.Location = new System.Drawing.Point(111, 31);
             this.text_yur_adress_tek.MaxLength = 250;
             this.text_yur_adress_tek.Name = "text_yur_adress_tek";
-            this.text_yur_adress_tek.Size = new System.Drawing.Size(210, 23);
+            this.text_yur_adress_tek.Size = new System.Drawing.Size(211, 23);
             this.text_yur_adress_tek.TabIndex = 7;
             // 
             // text_Ndog_tek
             // 
             this.text_Ndog_tek.Dock = System.Windows.Forms.DockStyle.Top;
             this.text_Ndog_tek.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_Ndog_tek.Location = new System.Drawing.Point(110, 59);
+            this.text_Ndog_tek.Location = new System.Drawing.Point(111, 59);
             this.text_Ndog_tek.MaxLength = 50;
             this.text_Ndog_tek.Name = "text_Ndog_tek";
-            this.text_Ndog_tek.Size = new System.Drawing.Size(101, 23);
+            this.text_Ndog_tek.Size = new System.Drawing.Size(102, 23);
             this.text_Ndog_tek.TabIndex = 8;
             // 
             // text_inn_tek
@@ -315,10 +325,10 @@ namespace rab_stol_WF
             this.tablePanel_tek.SetColumnSpan(this.text_inn_tek, 2);
             this.text_inn_tek.Dock = System.Windows.Forms.DockStyle.Top;
             this.text_inn_tek.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_inn_tek.Location = new System.Drawing.Point(110, 115);
+            this.text_inn_tek.Location = new System.Drawing.Point(111, 115);
             this.text_inn_tek.MaxLength = 50;
             this.text_inn_tek.Name = "text_inn_tek";
-            this.text_inn_tek.Size = new System.Drawing.Size(210, 23);
+            this.text_inn_tek.Size = new System.Drawing.Size(211, 23);
             this.text_inn_tek.TabIndex = 9;
             // 
             // text_kpp_tek
@@ -326,10 +336,10 @@ namespace rab_stol_WF
             this.tablePanel_tek.SetColumnSpan(this.text_kpp_tek, 2);
             this.text_kpp_tek.Dock = System.Windows.Forms.DockStyle.Top;
             this.text_kpp_tek.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_kpp_tek.Location = new System.Drawing.Point(110, 143);
+            this.text_kpp_tek.Location = new System.Drawing.Point(111, 143);
             this.text_kpp_tek.MaxLength = 50;
             this.text_kpp_tek.Name = "text_kpp_tek";
-            this.text_kpp_tek.Size = new System.Drawing.Size(210, 23);
+            this.text_kpp_tek.Size = new System.Drawing.Size(211, 23);
             this.text_kpp_tek.TabIndex = 10;
             // 
             // date_dog_tek
@@ -337,19 +347,19 @@ namespace rab_stol_WF
             this.date_dog_tek.Dock = System.Windows.Forms.DockStyle.Top;
             this.date_dog_tek.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.date_dog_tek.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date_dog_tek.Location = new System.Drawing.Point(110, 87);
+            this.date_dog_tek.Location = new System.Drawing.Point(111, 87);
             this.date_dog_tek.Name = "date_dog_tek";
-            this.date_dog_tek.Size = new System.Drawing.Size(101, 23);
+            this.date_dog_tek.Size = new System.Drawing.Size(102, 23);
             this.date_dog_tek.TabIndex = 11;
             // 
             // panel_zavod
             // 
             this.panel_zavod.Controls.Add(this.combo_zavod);
             this.panel_zavod.Controls.Add(this.label_zavod);
-            this.panel_zavod.Location = new System.Drawing.Point(217, 59);
+            this.panel_zavod.Location = new System.Drawing.Point(219, 59);
             this.panel_zavod.Name = "panel_zavod";
             this.tablePanel_tek.SetRowSpan(this.panel_zavod, 2);
-            this.panel_zavod.Size = new System.Drawing.Size(103, 50);
+            this.panel_zavod.Size = new System.Drawing.Size(102, 50);
             this.panel_zavod.TabIndex = 12;
             // 
             // combo_zavod
@@ -362,7 +372,7 @@ namespace rab_stol_WF
             "КЖК, НБП"});
             this.combo_zavod.Location = new System.Drawing.Point(0, 26);
             this.combo_zavod.Name = "combo_zavod";
-            this.combo_zavod.Size = new System.Drawing.Size(103, 24);
+            this.combo_zavod.Size = new System.Drawing.Size(102, 24);
             this.combo_zavod.TabIndex = 1;
             // 
             // label_zavod
@@ -371,7 +381,7 @@ namespace rab_stol_WF
             this.label_zavod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_zavod.Location = new System.Drawing.Point(0, 0);
             this.label_zavod.Name = "label_zavod";
-            this.label_zavod.Size = new System.Drawing.Size(103, 20);
+            this.label_zavod.Size = new System.Drawing.Size(102, 20);
             this.label_zavod.TabIndex = 0;
             this.label_zavod.Text = "Завод";
             this.label_zavod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -380,9 +390,9 @@ namespace rab_stol_WF
             // 
             this.group_bank.Controls.Add(this.tablePanel_bank);
             this.group_bank.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.group_bank.Location = new System.Drawing.Point(338, 42);
+            this.group_bank.Location = new System.Drawing.Point(340, 42);
             this.group_bank.Name = "group_bank";
-            this.group_bank.Size = new System.Drawing.Size(308, 190);
+            this.group_bank.Size = new System.Drawing.Size(310, 190);
             this.group_bank.TabIndex = 5;
             this.group_bank.TabStop = false;
             this.group_bank.Text = "Реквизиты банка";
@@ -408,7 +418,7 @@ namespace rab_stol_WF
             this.tablePanel_bank.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tablePanel_bank.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tablePanel_bank.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tablePanel_bank.Size = new System.Drawing.Size(302, 171);
+            this.tablePanel_bank.Size = new System.Drawing.Size(304, 171);
             this.tablePanel_bank.TabIndex = 0;
             // 
             // label_bank_name
@@ -416,7 +426,7 @@ namespace rab_stol_WF
             this.label_bank_name.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_bank_name.Location = new System.Drawing.Point(3, 0);
             this.label_bank_name.Name = "label_bank_name";
-            this.label_bank_name.Size = new System.Drawing.Size(99, 42);
+            this.label_bank_name.Size = new System.Drawing.Size(100, 42);
             this.label_bank_name.TabIndex = 0;
             this.label_bank_name.Text = "Наименование банка";
             this.label_bank_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -426,7 +436,7 @@ namespace rab_stol_WF
             this.label_bank_r_s.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_bank_r_s.Location = new System.Drawing.Point(3, 42);
             this.label_bank_r_s.Name = "label_bank_r_s";
-            this.label_bank_r_s.Size = new System.Drawing.Size(99, 42);
+            this.label_bank_r_s.Size = new System.Drawing.Size(100, 42);
             this.label_bank_r_s.TabIndex = 1;
             this.label_bank_r_s.Text = "Расч/счет";
             this.label_bank_r_s.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -436,7 +446,7 @@ namespace rab_stol_WF
             this.label_bank_k_s.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_bank_k_s.Location = new System.Drawing.Point(3, 84);
             this.label_bank_k_s.Name = "label_bank_k_s";
-            this.label_bank_k_s.Size = new System.Drawing.Size(99, 42);
+            this.label_bank_k_s.Size = new System.Drawing.Size(100, 42);
             this.label_bank_k_s.TabIndex = 2;
             this.label_bank_k_s.Text = "Корр/счет";
             this.label_bank_k_s.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -446,7 +456,7 @@ namespace rab_stol_WF
             this.label_bank_bik.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_bank_bik.Location = new System.Drawing.Point(3, 126);
             this.label_bank_bik.Name = "label_bank_bik";
-            this.label_bank_bik.Size = new System.Drawing.Size(99, 45);
+            this.label_bank_bik.Size = new System.Drawing.Size(100, 45);
             this.label_bank_bik.TabIndex = 3;
             this.label_bank_bik.Text = "БИК";
             this.label_bank_bik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -455,49 +465,49 @@ namespace rab_stol_WF
             // 
             this.text_bank_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.text_bank_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_bank_name.Location = new System.Drawing.Point(108, 9);
+            this.text_bank_name.Location = new System.Drawing.Point(109, 9);
             this.text_bank_name.MaxLength = 256;
             this.text_bank_name.Name = "text_bank_name";
-            this.text_bank_name.Size = new System.Drawing.Size(191, 23);
+            this.text_bank_name.Size = new System.Drawing.Size(192, 23);
             this.text_bank_name.TabIndex = 4;
             // 
             // text_bank_r_s
             // 
             this.text_bank_r_s.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.text_bank_r_s.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_bank_r_s.Location = new System.Drawing.Point(108, 51);
+            this.text_bank_r_s.Location = new System.Drawing.Point(109, 51);
             this.text_bank_r_s.MaxLength = 50;
             this.text_bank_r_s.Name = "text_bank_r_s";
-            this.text_bank_r_s.Size = new System.Drawing.Size(191, 23);
+            this.text_bank_r_s.Size = new System.Drawing.Size(192, 23);
             this.text_bank_r_s.TabIndex = 5;
             // 
             // text_bank_k_s
             // 
             this.text_bank_k_s.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.text_bank_k_s.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_bank_k_s.Location = new System.Drawing.Point(108, 93);
+            this.text_bank_k_s.Location = new System.Drawing.Point(109, 93);
             this.text_bank_k_s.MaxLength = 50;
             this.text_bank_k_s.Name = "text_bank_k_s";
-            this.text_bank_k_s.Size = new System.Drawing.Size(191, 23);
+            this.text_bank_k_s.Size = new System.Drawing.Size(192, 23);
             this.text_bank_k_s.TabIndex = 6;
             // 
             // text_bank_bik
             // 
             this.text_bank_bik.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.text_bank_bik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_bank_bik.Location = new System.Drawing.Point(108, 137);
+            this.text_bank_bik.Location = new System.Drawing.Point(109, 137);
             this.text_bank_bik.MaxLength = 50;
             this.text_bank_bik.Name = "text_bank_bik";
-            this.text_bank_bik.Size = new System.Drawing.Size(191, 23);
+            this.text_bank_bik.Size = new System.Drawing.Size(192, 23);
             this.text_bank_bik.TabIndex = 7;
             // 
             // group_uch_tek
             // 
             this.group_uch_tek.Controls.Add(this.tablePanel_uch);
             this.group_uch_tek.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.group_uch_tek.Location = new System.Drawing.Point(652, 42);
+            this.group_uch_tek.Location = new System.Drawing.Point(656, 42);
             this.group_uch_tek.Name = "group_uch_tek";
-            this.group_uch_tek.Size = new System.Drawing.Size(238, 190);
+            this.group_uch_tek.Size = new System.Drawing.Size(242, 190);
             this.group_uch_tek.TabIndex = 6;
             this.group_uch_tek.TabStop = false;
             this.group_uch_tek.Text = "Учетные данные";
@@ -520,7 +530,7 @@ namespace rab_stol_WF
             this.tablePanel_uch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tablePanel_uch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tablePanel_uch.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tablePanel_uch.Size = new System.Drawing.Size(232, 171);
+            this.tablePanel_uch.Size = new System.Drawing.Size(236, 171);
             this.tablePanel_uch.TabIndex = 0;
             // 
             // label_login
@@ -528,7 +538,7 @@ namespace rab_stol_WF
             this.label_login.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_login.Location = new System.Drawing.Point(3, 0);
             this.label_login.Name = "label_login";
-            this.label_login.Size = new System.Drawing.Size(79, 57);
+            this.label_login.Size = new System.Drawing.Size(81, 57);
             this.label_login.TabIndex = 0;
             this.label_login.Text = "Логин";
             this.label_login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -538,7 +548,7 @@ namespace rab_stol_WF
             this.label_pass.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_pass.Location = new System.Drawing.Point(3, 57);
             this.label_pass.Name = "label_pass";
-            this.label_pass.Size = new System.Drawing.Size(79, 57);
+            this.label_pass.Size = new System.Drawing.Size(81, 57);
             this.label_pass.TabIndex = 1;
             this.label_pass.Text = "Пароль";
             this.label_pass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -549,7 +559,7 @@ namespace rab_stol_WF
             this.label_empID.ForeColor = System.Drawing.Color.Red;
             this.label_empID.Location = new System.Drawing.Point(3, 114);
             this.label_empID.Name = "label_empID";
-            this.label_empID.Size = new System.Drawing.Size(79, 57);
+            this.label_empID.Size = new System.Drawing.Size(81, 57);
             this.label_empID.TabIndex = 2;
             this.label_empID.Text = "Код сотрудника добавившего ТЭК";
             this.label_empID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -558,29 +568,29 @@ namespace rab_stol_WF
             // 
             this.text_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.text_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_login.Location = new System.Drawing.Point(88, 16);
+            this.text_login.Location = new System.Drawing.Point(90, 16);
             this.text_login.MaxLength = 50;
             this.text_login.Name = "text_login";
-            this.text_login.Size = new System.Drawing.Size(141, 24);
+            this.text_login.Size = new System.Drawing.Size(143, 24);
             this.text_login.TabIndex = 3;
             // 
             // text_pass
             // 
             this.text_pass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.text_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_pass.Location = new System.Drawing.Point(88, 73);
+            this.text_pass.Location = new System.Drawing.Point(90, 73);
             this.text_pass.MaxLength = 50;
             this.text_pass.Name = "text_pass";
-            this.text_pass.Size = new System.Drawing.Size(141, 24);
+            this.text_pass.Size = new System.Drawing.Size(143, 24);
             this.text_pass.TabIndex = 4;
             // 
             // text_empID
             // 
             this.text_empID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.text_empID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.text_empID.Location = new System.Drawing.Point(88, 130);
+            this.text_empID.Location = new System.Drawing.Point(90, 130);
             this.text_empID.Name = "text_empID";
-            this.text_empID.Size = new System.Drawing.Size(141, 24);
+            this.text_empID.Size = new System.Drawing.Size(143, 24);
             this.text_empID.TabIndex = 5;
             this.text_empID.TextChanged += new System.EventHandler(this.text_empID_TextChanged);
             this.text_empID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_empID_KeyPress);
@@ -593,7 +603,7 @@ namespace rab_stol_WF
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 238);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(329, 71);
+            this.panel1.Size = new System.Drawing.Size(331, 71);
             this.panel1.TabIndex = 9;
             // 
             // btn_edit_pass
@@ -602,7 +612,7 @@ namespace rab_stol_WF
             this.btn_edit_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_edit_pass.Location = new System.Drawing.Point(126, 0);
             this.btn_edit_pass.Name = "btn_edit_pass";
-            this.btn_edit_pass.Size = new System.Drawing.Size(94, 71);
+            this.btn_edit_pass.Size = new System.Drawing.Size(96, 71);
             this.btn_edit_pass.TabIndex = 9;
             this.btn_edit_pass.Text = "Изменение пароля";
             this.btn_edit_pass.UseVisualStyleBackColor = true;
@@ -612,7 +622,7 @@ namespace rab_stol_WF
             // 
             this.link_act.Dock = System.Windows.Forms.DockStyle.Right;
             this.link_act.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.link_act.Location = new System.Drawing.Point(220, 0);
+            this.link_act.Location = new System.Drawing.Point(222, 0);
             this.link_act.Name = "link_act";
             this.link_act.Size = new System.Drawing.Size(109, 71);
             this.link_act.TabIndex = 8;
@@ -657,16 +667,16 @@ namespace rab_stol_WF
             this.panel2.Controls.Add(this.btn_instruction);
             this.panel2.Controls.Add(this.group_search_user);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(338, 238);
+            this.panel2.Location = new System.Drawing.Point(340, 238);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(308, 71);
+            this.panel2.Size = new System.Drawing.Size(310, 71);
             this.panel2.TabIndex = 10;
             // 
             // btn_instruction
             // 
             this.btn_instruction.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_instruction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn_instruction.Location = new System.Drawing.Point(202, 0);
+            this.btn_instruction.Location = new System.Drawing.Point(204, 0);
             this.btn_instruction.Name = "btn_instruction";
             this.btn_instruction.Size = new System.Drawing.Size(106, 71);
             this.btn_instruction.TabIndex = 9;
@@ -708,17 +718,118 @@ namespace rab_stol_WF
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 312);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(893, 141);
+            this.dataGridView1.Size = new System.Drawing.Size(1046, 141);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // panel_class
+            // 
+            this.panel_class.Controls.Add(this.combo_class);
+            this.panel_class.Controls.Add(this.label_class);
+            this.panel_class.Location = new System.Drawing.Point(907, 42);
+            this.panel_class.Name = "panel_class";
+            this.panel_class.Size = new System.Drawing.Size(135, 48);
+            this.panel_class.TabIndex = 2;
+            // 
+            // combo_class
+            // 
+            this.combo_class.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.combo_class.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.combo_class.FormattingEnabled = true;
+            this.combo_class.Items.AddRange(new object[] {
+            "Транспортная",
+            "Ж/д оператор"});
+            this.combo_class.Location = new System.Drawing.Point(0, 24);
+            this.combo_class.Name = "combo_class";
+            this.combo_class.Size = new System.Drawing.Size(135, 24);
+            this.combo_class.TabIndex = 1;
+            this.combo_class.SelectedIndexChanged += new System.EventHandler(this.combo_class_SelectedIndexChanged);
+            // 
+            // label_class
+            // 
+            this.label_class.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_class.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_class.Location = new System.Drawing.Point(0, 0);
+            this.label_class.Name = "label_class";
+            this.label_class.Size = new System.Drawing.Size(135, 20);
+            this.label_class.TabIndex = 0;
+            this.label_class.Text = "Класс";
+            this.label_class.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // group_uslugi
+            // 
+            this.group_uslugi.Controls.Add(this.text_to_railway_trans);
+            this.group_uslugi.Controls.Add(this.label_to_railway_trans);
+            this.group_uslugi.Controls.Add(this.text_from_railway_trans);
+            this.group_uslugi.Controls.Add(this.label_from_railway_trans);
+            this.group_uslugi.Controls.Add(this.btn_copy_service);
+            this.group_uslugi.Enabled = false;
+            this.group_uslugi.Location = new System.Drawing.Point(907, 96);
+            this.group_uslugi.Name = "group_uslugi";
+            this.group_uslugi.Size = new System.Drawing.Size(135, 195);
+            this.group_uslugi.TabIndex = 3;
+            this.group_uslugi.TabStop = false;
+            this.group_uslugi.Text = "Услуги";
+            // 
+            // btn_copy_service
+            // 
+            this.btn_copy_service.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_copy_service.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_copy_service.Location = new System.Drawing.Point(3, 150);
+            this.btn_copy_service.Name = "btn_copy_service";
+            this.btn_copy_service.Size = new System.Drawing.Size(129, 42);
+            this.btn_copy_service.TabIndex = 0;
+            this.btn_copy_service.Text = "Копирование услуг";
+            this.btn_copy_service.UseVisualStyleBackColor = true;
+            this.btn_copy_service.Click += new System.EventHandler(this.btn_copy_service_Click);
+            // 
+            // label_from_railway_trans
+            // 
+            this.label_from_railway_trans.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_from_railway_trans.Location = new System.Drawing.Point(3, 16);
+            this.label_from_railway_trans.Name = "label_from_railway_trans";
+            this.label_from_railway_trans.Size = new System.Drawing.Size(129, 30);
+            this.label_from_railway_trans.TabIndex = 1;
+            this.label_from_railway_trans.Text = "ЖД Оператор откуда копировать";
+            this.label_from_railway_trans.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // text_from_railway_trans
+            // 
+            this.text_from_railway_trans.Dock = System.Windows.Forms.DockStyle.Top;
+            this.text_from_railway_trans.Location = new System.Drawing.Point(3, 46);
+            this.text_from_railway_trans.Name = "text_from_railway_trans";
+            this.text_from_railway_trans.Size = new System.Drawing.Size(129, 20);
+            this.text_from_railway_trans.TabIndex = 2;
+            this.text_from_railway_trans.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_from_railway_trans_KeyPress);
+            // 
+            // label_to_railway_trans
+            // 
+            this.label_to_railway_trans.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_to_railway_trans.Location = new System.Drawing.Point(3, 90);
+            this.label_to_railway_trans.Name = "label_to_railway_trans";
+            this.label_to_railway_trans.Size = new System.Drawing.Size(129, 37);
+            this.label_to_railway_trans.TabIndex = 3;
+            this.label_to_railway_trans.Text = "ЖД Оператор куда копировать";
+            this.label_to_railway_trans.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // text_to_railway_trans
+            // 
+            this.text_to_railway_trans.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.text_to_railway_trans.Location = new System.Drawing.Point(3, 130);
+            this.text_to_railway_trans.Name = "text_to_railway_trans";
+            this.text_to_railway_trans.Size = new System.Drawing.Size(129, 20);
+            this.text_to_railway_trans.TabIndex = 4;
+            this.text_to_railway_trans.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_to_railway_trans_KeyPress);
             // 
             // new_tek_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 453);
+            this.ClientSize = new System.Drawing.Size(1046, 453);
+            this.Controls.Add(this.group_uslugi);
+            this.Controls.Add(this.panel_class);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -744,6 +855,9 @@ namespace rab_stol_WF
             this.group_search_user.ResumeLayout(false);
             this.group_search_user.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel_class.ResumeLayout(false);
+            this.group_uslugi.ResumeLayout(false);
+            this.group_uslugi.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -803,5 +917,14 @@ namespace rab_stol_WF
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_instruction;
         private System.Windows.Forms.Button btn_edit_pass;
+        private System.Windows.Forms.Panel panel_class;
+        private System.Windows.Forms.ComboBox combo_class;
+        private System.Windows.Forms.Label label_class;
+        private System.Windows.Forms.GroupBox group_uslugi;
+        private System.Windows.Forms.Button btn_copy_service;
+        private System.Windows.Forms.TextBox text_to_railway_trans;
+        private System.Windows.Forms.Label label_to_railway_trans;
+        private System.Windows.Forms.TextBox text_from_railway_trans;
+        private System.Windows.Forms.Label label_from_railway_trans;
     }
 }
